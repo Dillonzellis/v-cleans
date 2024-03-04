@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1 className="text-6xl font-bold">V Cleans</h1>
-      <div className="flex gap-2">
+    <main className="flex min-h-screen flex-col items-center justify-between py-12 md:px-24 px-8">
+      <h1 className="text-6xl text-center pb-12">V Cleans</h1>
+      <div className="flex flex-col md:flex-row gap-2 pb-12">
         <Image alt="" src={pika} />
         <Image alt="" src={pika} />
         <Image alt="" src={pika} />
