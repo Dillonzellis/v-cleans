@@ -1,6 +1,7 @@
 import Image from "next/image";
 import pika from "/public/pika-fishing.jpeg";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -11,7 +12,9 @@ export default function Home() {
         <Image alt="" src={pika} />
         <Image alt="" src={pika} />
       </div>
-      <Button>Get A Quote</Button>
+      <Button asChild>
+        <Link href="/contact">Get a Quote</Link>
+      </Button>
     </main>
   );
 }
