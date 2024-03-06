@@ -1,12 +1,13 @@
 "use client";
 
-import { sendEmail } from "@/actions/sendEmail";
+import { sendEmail, confirmationEmail } from "@/actions/sendEmail";
 
 export const ContactForm = () => {
   return (
     <form
       action={async (formData) => {
         await sendEmail(formData);
+        await confirmationEmail(formData);
       }}
     >
       <input name="senderEmail" type="senderEmail" placeholder="Your Email" />

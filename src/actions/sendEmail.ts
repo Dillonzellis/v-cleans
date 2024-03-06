@@ -15,3 +15,15 @@ export const sendEmail = async (formData: FormData) => {
     html: `<h1>this is dank!</h1><span>${message}</span>`,
   });
 };
+
+export const confirmationEmail = async (formData: FormData) => {
+  const senderEmail = formData.get("senderEmail");
+  const message = formData.get("message");
+
+  resend.emails.send({
+    from: "onboarding@resend.dev",
+    to: "dillonzellis@gmail.com",
+    subject: "Confirm",
+    text: `Thanks for signing up!`,
+  });
+};
